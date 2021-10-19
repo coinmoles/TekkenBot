@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.30",
+    "@types/consola": "^2.2.5",
+    "@types/dotenv": "^8.2.0",
+    "@types/glob": "^7.1.4",
+    "@types/luxon": "^2.0.4",
+    "@types/node-fetch": "^3.0.3",
+    "axios": "^0.22.0",
+    "cheerio": "^1.0.0-rc.10",
+    "consola": "^2.15.3",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "fs": "^0.0.1-security",
+    "glob": "^7.2.0",
+    "luxon": "^2.0.2",
+    "ts-node": "^10.2.1"
+  },
+  "scripts": {
+    "start:dev": "NODE_ENV=development ts-node-dev --respawn --transfile-only src/index.ts",
+    "start:build": "NODE_ENV=proudction node build/index.js",
+    "start": "NODE_ENV=production ts-node src/index.ts",
+    "build": "tsc-watch --onSuccess 'node ./dist/index.js'"
+  },
+  "devDependencies": {
+    "discord.js-pagination": "^1.0.3",
+    "tsc-watch": "^4.5.0"
+  }
+}
